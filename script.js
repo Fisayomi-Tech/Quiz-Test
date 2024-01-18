@@ -1,104 +1,103 @@
 const questions = [
 
     {
-        question: "What is the largest animal in the world",
+        question: "What does HTML stand for?",
         answers: [
-            {text:"Shark", correct: false},
-            {text:"Blue whale", correct: true},
-            {text:"Lion", correct: false},
-            {text:"Leopard", correct: false},
+            {text:" Hyper Transfer Markup Language", correct: false},
+            {text:"Hyper Text Makeup Language", correct: false},
+            {text:"Hyperlink and Text Markup Language", correct: false},
+            {text:" Hyper Text Markup Language", correct: true},
         
         ]
 
     },
     {
-
-        question: "What is the capital of Australia",
+        question: "Which CSS property is used to change the text color of an element?",
         answers: [
-            {text:"Sydney", correct: false},
-            {text:"Melbourne", correct: false},
-            {text:"Canberra", correct: true},
-            {text:"Leopard", correct: false},
+            {text:"text-color", correct: false},
+            {text:"font-color", correct: false},
+            {text:"color", correct: true},
+            {text:"text-style", correct: false},
         ]
     },
     {
 
-        question: "Which country is the largest by land",
+         question: "What is the purpose of JavaScript?",
         answers: [
-            {text:"China", correct: false},
-            {text:"Russia", correct: true},
-            {text:"USA", correct: false},
-            {text:"Canada", correct: false},
+            {text:"To style web pages", correct: false},
+            {text:"To create interactive elements on web pages", correct: true},
+            {text:"To define the structure of web pages", correct: false},
+            {text:"To manage database operations", correct: false},
         ]
     },
     {
 
-        question: "Which of the planet is known as the red planet",
+        question: "Which property is used to control the space between the border and the content inside an element?",
         answers: [
-            {text:"Mars", correct: true},
-            {text:"Earth", correct: false},
-            {text:"Jupiter", correct: false},
-            {text:"Venus", correct: false},
+            { text: "padding", correct: true},
+            {text:" border-spacing", correct: false},
+            {text:" spacing", correct: false},
+            {text:" margin", correct: false},
         ]
     },
     {
 
-        question: "What is the currency of Japan",
+        question: "Which of the following is NOT a valid way to declare a variable in JavaScript?",
         answers: [
-            {text:"Yen", correct: true},
-            {text:"Dollar", correct: false},
-            {text:"Naira", correct: false},
-            {text:"Cedi", correct: false},
+            {text:"variable", correct: true},
+            {text: "let", correct: false},
+            {text:"var", correct: false},
+            {text:"const", correct: false},
         ]
     },
     {
 
-        question: "Who wrote Rome And Juliet",
+        question: "What does the box model in CSS consist of?",
         answers: [
-            {text:"Charles Dickens", correct: false},
-            {text:"Willams Shakespeare", correct: true},
-            {text:"Jane Austen", correct: false},
-            {text:"Mark Twain", correct: false},
+            {text:"Header, Body, Footer", correct: false},
+            {text:" Margin, Border, Padding, Content", correct: true},
+            {text:"Class, ID, Tag", correct: false},
+            {text:" Float, Clear, Position, Display", correct: false},
         ]
     },
     {
 
-        question: "What is the main language spoken in Brazil",
+        question: "What does CSS stand for?",
         answers: [
-            {text:"Spanish", correct: false},
-            {text:"Italian", correct: false},
-            {text:"French", correct: false},
-            {text:"Portuguese", correct: true},
+            {text:"Counter Style Sheets", correct: false},
+            {text:" Computer Style Sheets", correct: false},
+            {text:"Creative Style Sheets", correct: false},
+            {text:"Cascading Style Sheets", correct: true},
         ]
     },
     {
 
-        question: "Which ocean is the largest",
+        question: " Which event in JavaScript is triggered when a user clicks on an HTML element?",
         answers: [
-            {text:"Atlanic", correct: false},
-            {text:"Indian", correct: false},
-            {text:"Pacific", correct: true},
-            {text:"Southern", correct: false},
+            {text:"onmouseover", correct: false},
+            {text:"onsubmit", correct: false},
+            {text:"onclick", correct: true},
+            {text:"onchange", correct: false},
         ]
     },
     {
 
-        question: "What is the tallest mountain in the world",
+        question: "What is the purpose of the viewport meta tag in HTML?",
         answers: [
-            {text:"K2", correct: false},
-            {text:"Mountain Everest", correct: true},
-            {text:"Kilimajaro", correct: false},
-            {text:"Denail", correct: false},
+            {text:"To set the background color of the webpage", correct: false},
+            {text:"To define the visible area of the webpage on different devices", correct: true},
+            {text:" To create a link to another webpage", correct: false},
+            {text:"To set the font size of the webpage", correct: false},
         ]
     },
     {
 
-        question: "All of these are in the cat family except",
+        question: " How can you center an element horizontally in CSS?",
         answers: [
-            {text:"lion", correct: false},
-            {text:"Tiger", correct: false},
-            {text:"Leopard", correct: false},
-            {text:"Fox", correct: true},
+            {text:"text-align: center;", correct: false},
+            {text:"align: center;", correct: false},
+            {text:"margin: auto;", correct: true},
+            {text:"center: true;", correct: false},
         ]
     }
 
@@ -172,12 +171,10 @@ nextButton.style.display = "block";
 
 function showScore(){
     resetState();
-    questionElement.innerHTML = 'You scored ${score} out of ${questions.length}!';
+    questionElement.innerHTML = `You scored ${score} out of ${questions.length}!` ;
     nextButton.innerHTML = "Play Again";
     nextButton.style.display = "block";
-}
-
-
+} 
 
 function handleNextButton(){
     currentQuestionIndex++;
@@ -193,8 +190,10 @@ nextButton.addEventListener("click",()=>{
     handleNextButton();
    }else{
     startQuiz();
+  }
+  
 
-   }
+ 
 });
 
 startQuiz();
